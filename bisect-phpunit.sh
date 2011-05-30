@@ -11,7 +11,7 @@ fi
 
 if [ $EXIT_CODE -eq "2" ]; then
   # The testsuite does not exist, so we skip bisect here.
-  exit 127
+  exit 125
 fi
 
 exit $EXIT_CODE
