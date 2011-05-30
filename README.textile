@@ -1,0 +1,32 @@
+h1. What is git-bisect?
+
+git-bisect is a command tool to help finding commits that change a good state.
+
+h2. How to use git-bisect?
+
+This example uses git bisect in conjunction with _phpunit_ to check when the testsuite breaks.
+
+h3. Define the "good" state
+
+To define the "good" state, we choose _phpunit_. This is the testsuite run. If it fails, the commits state is "bad".
+
+h3. Set up
+
+The following commands will start the actual work with git-bisect.
+
+* git bisect start
+* git bisect bad
+
+This will start the bisect search and mark the current version as "bad".
+
+h3. Knowing the good version
+
+* git bisect good SHA1
+
+This will mark the last known "good" state on the commit hash SHA1.
+
+h3. Automate it!
+
+* git bisect run phpunit
+
+This will issue bisect to use the _phpunit_ command line to check for a good state for each commit.
