@@ -27,6 +27,7 @@ This will mark the last known "good" state on the commit hash SHA1.
 
 h3. Automate it!
 
-* git bisect run phpunit
+* git bisect run ./bisect-phpunit.sh
 
 This will issue bisect to use the _phpunit_ command line to check for a good state for each commit.
+The script will wrap the exit codes of phpunit to the correct ones to operate with git-bisect.
