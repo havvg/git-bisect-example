@@ -7,7 +7,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 $app = new Application();
 
 $app->get('/', function() use ($app) {
-    return new Response('OK.', 304);
+    return new Response('OK.', 200);
 });
 
 $app->error(function (\Exception $e) use ($app) {
