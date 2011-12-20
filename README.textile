@@ -37,6 +37,8 @@ h2. Try-it Out
 Using this project you can use these commands to actually test it.
 
 * git bisect start
-* git bisect bad #ABadCommitSha
+* git bisect bad #ABadCommitSha (HEAD is bad, so we can leave it out)
 * git bisect good 0fef4d40fec8ba1d1de73d8f13739e6c890e2223
 * git bisect run ./bisect-phpunit.sh
+
+The result will be this commit:b27af3d6ff6da22e02850d6e61d966db438847d7.
