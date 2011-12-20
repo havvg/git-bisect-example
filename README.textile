@@ -31,3 +31,12 @@ h3. Automate it!
 
 This will issue bisect to use the _phpunit_ command line to check for a good state for each commit.
 The script will wrap the exit codes of phpunit to the correct ones to operate with git-bisect.
+
+h2. Try-it Out
+
+Using this project you can use these commands to actually test it.
+
+* git bisect start
+* git bisect bad #ABadCommitSha
+* git bisect good 0fef4d40fec8ba1d1de73d8f13739e6c890e2223
+* git bisect run ./bisect-phpunit.sh
